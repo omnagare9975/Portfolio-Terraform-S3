@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Om Nagare | DevOps & Cloud Engineer</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Dark mode */
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    
+    /* Dark mode transitions */
+    .dark-mode-transition {
+      transition: all 0.3s ease;
+    }
+
+    /* Custom improvements for buttons */
+    .btn-primary {
+      background-color: #1da1f2;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0073e6;
+      transform: scale(1.05);
+    }
+
+    /* Profile image styles */
+    .profile-img {
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      margin: 20px auto;
+    }
+
+    /* Dark Mode Button */
+    .dark-mode-toggle {
+      background-color: #f1f1f1;
+      border: none;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: #e2e2e2;
+    }
+
+    .dark-mode .dark-mode-toggle {
+      background-color: #333;
+      color: #f1f1f1;
+    }
+
+    .dark-mode .dark-mode-toggle:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 dark-mode-transition">
+
+  <!-- Toggle dark mode button -->
+  <button id="darkModeToggle" onclick="toggleDarkMode()" class="fixed top-5 right-5 dark-mode-toggle">
+    <i id="darkModeIcon" class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header Section -->
+  <header class="bg-gradient-to-r from-blue-500 to-teal-400 h-screen flex flex-col justify-center items-center text-white">
+    <img src="omsd (1).jpg" alt="Om Nagare Photo" class="profile-img shadow-lg">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 animate__animated animate__fadeInDown">Om Nagare</h1>
+    <p class="text-lg md:text-2xl mb-6 animate__animated animate__fadeInUp">DevOps & AWS Cloud Engineer</p>
+    <a href="#about" class="btn-primary">Explore My Work</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100 dark:bg-gray-900 dark:text-white">
+    <div class="container mx-auto px-8 md:px-20 fade-in">
+      <h2 class="text-4xl font-semibold text-center mb-8">About Me</h2>
+      <p class="text-center max-w-xl mx-auto text-lg">I'm Om Nagare, a passionate DevOps Engineer specializing in AWS, Docker, Kubernetes, CI/CD pipelines, and more. I have experience in automating cloud infrastructure, deploying scalable applications, and optimizing cloud costs.</p>
+    </div>
+  </section>
+
+  <!-- Experience Section (from resume) -->
+  <section id="experience" class="py-20 bg-white dark:bg-gray-800 dark:text-white">
+    <div class="container mx-auto px-8 md:px-20 fade-in">
+      <h2 class="text-4xl font-semibold text-center mb-8">Experience</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+          <h3 class="text-2xl font-bold mb-4">DevOps Engineer - Real IT Solutions</h3>
+          <p>May 2024 - Jul 2024 (Internship)</p>
+          <p>Created EC2 instances, managed developer containers, automated application deployments, and optimized production environments with 60% downtime reduction.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+          <h3 class="text-2xl font-bold mb-4">Cloud Cost Optimization - AWS</h3>
+          <p>Implemented a Lambda function to identify and delete stale EBS snapshots, optimizing cloud storage and reducing overall cloud costs by 30%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-900 dark:text-white">
+    <div class="container mx-auto px-8 md:px-20 fade-in">
+      <h2 class="text-4xl font-semibold text-center mb-8">Skills</h2>
+      <div class="flex flex-wrap justify-center">
+        <div class="m-4 text-center">
+          <img src="https://img.icons8.com/color/96/000000/amazon-web-services.png" alt="AWS">
+          <p class="mt-2">AWS</p>
+        </div>
+        <div class="m-4 text-center">
+          <img src="https://img.icons8.com/color/96/000000/docker.png" alt="Docker">
+          <p class="mt-2">Docker</p>
+        </div>
+        <div class="m-4 text-center">
+          <img src="https://img.icons8.com/color/96/000000/kubernetes.png" alt="Kubernetes">
+          <p class="mt-2">Kubernetes</p>
+        </div>
+        <div class="m-4 text-center">
+          <img src="https://img.icons8.com/color/96/000000/jenkins.png" alt="Jenkins">
+          <p class="mt-2">Jenkins</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white dark:bg-gray-800 dark:text-white">
+    <div class="container mx-auto px-8 md:px-20 fade-in">
+      <h2 class="text-4xl font-semibold text-center mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Project Card 1 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+          <h3 class="text-2xl font-bold mb-4">Cloud Cost Optimization - AWS</h3>
+          <p>Implemented a Lambda function to optimize cloud storage costs by identifying and deleting stale EBS snapshots, reducing overall cloud costs by 30%.</p>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+          <h3 class="text-2xl font-bold mb-4">End-to-End CI/CD with Jenkins</h3>
+          <p>Created an automated CI/CD pipeline for a Java application, integrating Docker, Kubernetes, and ArgoCD to deploy on AWS with reduced downtime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900 dark:text-white">
+    <div class="container mx-auto px-8 md:px-20 fade-in">
+      <h2 class="text-4xl font-semibold text-center mb-8">Contact Me</h2>
+      <div class="text-center">
+        <p>I'd love to hear from you! Reach out to discuss projects, collaborations, or job opportunities.</p>
+        <a href="mailto:omnagare07@gmail.com" class="block mt-4 text-blue-600 dark:text-blue-400">omnagare07@gmail.com</a>
+        <a href="https://www.linkedin.com/in/om-nagare-620b90256/" target="_blank" class="block mt-2 text-blue-600 dark:text-blue-400">LinkedIn Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center text-white">
+    <p>© 2024 Om Nagare - All Rights Reserved</p>
+  </footer>
+
+  <!-- Script to handle fade-in animations and dark mode toggle -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.getElementById('darkModeIcon');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+  </script>
+</body>
+</html>
